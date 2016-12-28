@@ -25,14 +25,14 @@
   "devDependencies": {},
   "dependencies": {
     "ffi": "^2.2.0",
-    "fs-extra": "^0.22.1",
-    "get-me": "0.0.8",
+    "fs-extra": "^1.0.0",
+    "get-me": "0.0.9",
     "harmonize": "^1.4.2",
     "ref": "^1.0.2",
     "ref-struct": "^1.0.1",
-    "suspend": "^0.6.1",
+    "suspend": "^0.7.0",
     "underscore": "^1.8.3",
-    "yargs": "^3.15.0"
+    "yargs": "^6.5.0"
   },
   "engines": {
     "node": ">=0.11"
