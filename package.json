@@ -5,8 +5,8 @@
   "main": "index.js",
   "bin": "src/cli.js",
   "scripts": {
-    "test": "gulp test",
-    "debug-tests": "node-debug --nodejs --harmony --nodejs --harmony-proxies ./node_modules/gulp/bin/gulp.js test"
+    "static": "eslint .",
+    "test": "npm run static"
   },
   "repository": {
     "type": "git",
@@ -22,12 +22,13 @@
   ],
   "author": "Jon Hall <jon_Hall@outlook.com>",
   "license": "MIT",
-  "devDependencies": {},
+  "devDependencies": {
+    "eslint": "^3.12.2",
+    "eslint-config-xo": "^0.17.0"
+  },
   "dependencies": {
     "ffi": "^2.2.0",
     "fs-extra": "^1.0.0",
-    "get-me": "0.0.9",
-    "harmonize": "^1.4.2",
     "ref": "^1.0.2",
     "ref-struct": "^1.0.1",
     "suspend": "^0.7.0",
