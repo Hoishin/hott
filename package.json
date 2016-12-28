@@ -6,7 +6,6 @@
   "bin": "src/cli.js",
   "scripts": {
     "test": "gulp test",
-    "install": "node --harmony install.js",
     "debug-tests": "node-debug --nodejs --harmony --nodejs --harmony-proxies ./node_modules/gulp/bin/gulp.js test"
   },
   "repository": {
