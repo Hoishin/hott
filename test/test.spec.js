@@ -5,7 +5,7 @@ const robot = require('robotjs');
 
 describe('hott', () => {
 	before(() => {
-		hott.monitorHotkeys({poll: 1});
+		hott.monitorHotkeys();
 	});
 
 	it('should detect keys with no modifiers', done => {
