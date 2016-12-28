@@ -1,4 +1,4 @@
-## hott 
+## hott [![Build status](https://ci.appveyor.com/api/projects/status/aq35s86aavdjx6fl/branch/master?svg=true)](https://ci.appveyor.com/project/Lange/hott/branch/master)
 ##### Simple global hotkeys for Windows, with node
 
 ### Install
