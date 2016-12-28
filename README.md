@@ -1,4 +1,4 @@
-## hott
+## hott [![Build Status](https://travis-ci.org/Lange/hott.svg?branch=master)](https://travis-ci.org/Lange/hott)
 ##### Simple global hotkeys for Windows, with node
 
 ### Install
