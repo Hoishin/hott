@@ -214,6 +214,7 @@ const Point = structType({
 	x: ref.types.int64,
 	y: ref.types.int64
 });
+
 const Msg = structType({
 	hwnd: ref.types.int32,
 	message: ref.types.uint32,
@@ -222,6 +223,7 @@ const Msg = structType({
 	time: ref.types.uint32,
 	pt: Point
 });
+
 const MsgPtr = ref.refType(Msg);
 
 const winapi = new ffi.Library('User32', {
@@ -241,11 +243,11 @@ exports.registerHotkey = function (key, modifiers, command, cb) {
 	}
 
 	/* eslint-disable no-mixed-operators */
-	const noIdeaWhatThisIs = modifiers && modifiers.reduce((acc, m) => {
+	const fsModifiers = modifiers && modifiers.reduce((acc, m) => {
 		return acc | (Modifiers[m] || 0);
 	}, 0) || 0;
 
-	if (winapi.RegisterHotKey(null, ++hkId, noIdeaWhatThisIs, Keys[key])) {
+	if (winapi.RegisterHotKey(null, ++hkId, fsModifiers, Keys[key])) {
 		commands[hkId] = {cmd: command, cb};
 	}
 	/* eslint-enable no-mixed-operators */
@@ -255,6 +257,7 @@ exports.registerHotkey = function (key, modifiers, command, cb) {
 const defaultMonitorOpts = {
 	poll: 200
 };
+
 exports.monitorHotkeys = function (opts) {
 	const msg = new Msg({});
 	let reg;
