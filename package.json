@@ -6,7 +6,7 @@
   "bin": "src/cli.js",
   "scripts": {
     "static": "eslint .",
-    "test": "npm run static"
+    "test": "npm run static && mocha"
   },
   "repository": {
     "type": "git",
