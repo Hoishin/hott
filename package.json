@@ -3,7 +3,6 @@
   "version": "0.0.4",
   "description": "Windows global hotkeys for node",
   "main": "index.js",
-  "bin": "src/cli.js",
   "scripts": {
     "static": "eslint .",
     "test": "npm run static && mocha"
