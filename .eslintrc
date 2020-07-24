@@ -1,6 +1,7 @@
 {
 	"extends": "xo/esnext",
 	"rules": {
+		"linebreak-style": 0,
 		"new-cap": [
 			2,
 			{
