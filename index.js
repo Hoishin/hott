@@ -1,7 +1,7 @@
 const _ = require('underscore');
-const ffi = require('ffi');
-const ref = require('ref');
-const structType = require('ref-struct');
+const ffi = require('ffi-napi');
+const ref = require('ref-napi');
+const structType = require('ref-struct-napi');
 
 const WM_HOTKEY = 0x0312;
 const Modifiers = {

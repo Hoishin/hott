@@ -25,13 +25,13 @@
     "eslint": "^3.12.2",
     "eslint-config-xo": "^0.17.0",
     "mocha": "^3.2.0",
-    "robotjs": "^0.4.5"
+    "robotjs": "^0.6.0"
   },
   "dependencies": {
-    "ffi": "^2.2.0",
+    "ffi-napi": "^2.5.0",
     "fs-extra": "^1.0.0",
-    "ref": "^1.0.2",
-    "ref-struct": "^1.0.1",
+    "ref-napi": "^1.4.3",
+    "ref-struct-napi": "^1.1.1",
     "suspend": "^0.7.0",
     "underscore": "^1.8.3",
     "yargs": "^6.5.0"
