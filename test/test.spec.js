@@ -3,32 +3,36 @@
 const hott = require('../index');
 const robot = require('robotjs');
 
-describe('hott', () => {
-	before(() => {
-		hott.monitorHotkeys();
+let clearMonitor;
+
+beforeAll(() => {
+	clearMonitor = hott.monitorHotkeys();
+});
+
+afterAll(() => {
+	clearMonitor();
+});
+
+test('should detect keys with no modifiers', done => {
+	hott.registerHotkey('VK_KEY_X', [], () => {
+		done();
 	});
 
-	it('should detect keys with no modifiers', done => {
-		hott.registerHotkey('VK_KEY_X', [], () => {
-			done();
-		});
+	robot.keyTap('x');
+});
 
-		robot.keyTap('x');
+test('should detect keys with one modifier', done => {
+	hott.registerHotkey('VK_KEY_X', ['MOD_SHIFT'], () => {
+		done();
 	});
 
-	it('should detect keys with one modifier', done => {
-		hott.registerHotkey('VK_KEY_X', ['MOD_SHIFT'], () => {
-			done();
-		});
+	robot.keyTap('x', 'shift');
+});
 
-		robot.keyTap('x', 'shift');
+test('should detect keys with multiple modifiers', done => {
+	hott.registerHotkey('VK_KEY_X', ['MOD_SHIFT', 'MOD_CONTROL'], () => {
+		done();
 	});
 
-	it('should detect keys with multiple modifiers', done => {
-		hott.registerHotkey('VK_KEY_X', ['MOD_SHIFT', 'MOD_CONTROL'], () => {
-			done();
-		});
-
-		robot.keyTap('x', ['shift', 'control']);
-	});
+	robot.keyTap('x', ['shift', 'control']);
 });
