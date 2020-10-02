@@ -22,6 +22,7 @@
   "author": "Jon Hall <jon_Hall@outlook.com>",
   "license": "MIT",
   "devDependencies": {
+    "delay": "^4.4.0",
     "eslint": "^7.10.0",
     "eslint-config-xo": "^0.32.1",
     "jest": "^26.4.2",
